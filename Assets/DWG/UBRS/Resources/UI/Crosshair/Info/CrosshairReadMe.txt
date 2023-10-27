@@ -141,11 +141,17 @@ Step 6: Create in  -> Create Image -> Cross Center (Image) * Optional
 ___________________________________________________________________________________
 
 
+NOTE: As this is optional, if you do not want to use a center image you would need to 
+comment out the un-commented related sections in script that pertain to center 
+image.
+
+
 6.A)  In UI -> Canvas -> Crosshair, create "Image"  & rename "Cross Center"
 
 6.B)  Make sure the layer is set to: "UI"
 
 6.C) Modify:
+
 
 Rect Transform
 ---------------
@@ -153,19 +159,36 @@ Rect Transform
 Anchors: Middle & Center
 
 Position: X: 0  Y: 0  Z: 0
-Width: 10
-Height: 10
+Width: 15
+Height: 15
 
 Pivot: X: 0.5  Y: 0.5
 
 Color Hex: #FFFFFF
 
-Or also add a source image is another option.
+
+6.D) Import Image:
 
 
-NOTE: As this is optional, if you want to use a center image you would need to 
-uncomment the commented out the related sections in script that pertain to center 
-image.
+Crosshair Center: 
+-----------------
+
+DWG_CrossCenter.png
+
+
+Import Image and select it and modify settings as found below:
+
+Texture Type: Sprite (2D and UI)
+Compression: None
+
+Select "Apply" to apply the changes.
+
+
+6.E) Go back into UI -> Canvas -> Crosshair -> Cross Center 
+
+Modify:
+
+Source Image: "DWG_CrossCenter"
 
 
 -----------------------------------------------------------------------------------
@@ -240,6 +263,7 @@ DWG_Crosshair (Script):
 Script: DWG_Crosshair
 Cross Top: Cross Top (Image)
 Cross Left: Cross Left (Image)
+Cross Center: Cross Center (Image)
 Cross Right: Cross Right (Image)
 Cross Bottom: Cross Bottom (Image)
 Crosshair Enabled: "Checked" -> Yes  * Checked by default
@@ -249,16 +273,16 @@ Max Size: 250
 Speed: 7.5
 
 
-* NOTE: as noted earlier in Step 6, if you notice this step, Step 9, does not 
-  mention the optional: Cross Center (Image) in the script setup.
+* NOTE: as noted earlier in Step 6, if you notice this step, Step 9 
+  mentions the optional: Cross Center (Image) in the script setup.
 
   ie:
 
   Cross Center: Cross Center (Image)
 
- as that is optional and as noted before that part of the script is commented 
- out and in order to use such, those commented out section would need to be 
- uncommented. Hopefully that makes sense.
+ as noted in step 6 this is optional and as noted before that part of the script 
+ is un-commented & in order to not use such, those un-commented out sections would 
+ need to be commented out. Hopefully that makes sense.
 
 -----------------------------------------------------------------------------------
 

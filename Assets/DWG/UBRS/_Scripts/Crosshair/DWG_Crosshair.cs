@@ -16,7 +16,7 @@ namespace UBRS.DWG_Crosshair
         public Image CrossLeft;
 
         // Public - Image - CrossCenter
-        //public Image CrossCenter;        
+        public Image CrossCenter;        
 
         // Public - Image - CrossRight
         public Image CrossRight;
@@ -108,7 +108,7 @@ namespace UBRS.DWG_Crosshair
                 CrossLeft.gameObject.SetActive(true);
 
                 // Image - CrossCenter - gameObject - SetActive - True
-                //CrossCenter.gameObject.SetActive(true);                
+                CrossCenter.gameObject.SetActive(true);                
 
                 // Image - CrossRight - gameObject - SetActive - True
                 CrossRight.gameObject.SetActive(true);
@@ -137,7 +137,7 @@ namespace UBRS.DWG_Crosshair
                 CrossLeft.gameObject.SetActive(false);
 
                 // Image - CrossCenter - gameObject - SetActive - False
-                //CrossCenter.gameObject.SetActive(false);
+                CrossCenter.gameObject.SetActive(false);
 
                 // Image - CrossRight - gameObject - SetActive - False
                 CrossRight.gameObject.SetActive(false);
@@ -194,7 +194,9 @@ namespace UBRS.DWG_Crosshair
                 // If No Rigidbody Is Assigned, Check Input Axis Instead
 
                 // If - Input - Horizontal - Vertical - Mouse X - Mouse - Y - Not Equal To 0
-                if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0 || Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)
+                if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis
+                ("Vertical") != 0 || Input.GetAxis("Mouse X") != 0 ||
+                Input.GetAxis("Mouse Y") != 0)
                 {
 
                     // Return - True
