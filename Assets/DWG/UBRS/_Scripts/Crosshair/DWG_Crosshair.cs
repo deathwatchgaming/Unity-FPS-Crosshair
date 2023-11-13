@@ -1,9 +1,18 @@
+/*
+*
+*  Name: DWG Crosshair
+*  File: DWG_Crosshair.cs
+*  Author: Deathwatch Gaming
+*  License: MIT
+*
+*/
+
 // Using - Engine - UI
 using UnityEngine;
 using UnityEngine.UI;
 
-// Namespace - UBRS.DWG_Crosshair
-namespace UBRS.DWG_Crosshair
+// Namespace - DWG.UBRS.DWG_Crosshair
+namespace DWG.UBRS.DWG_Crosshair
 {
     // Public - Class - DWG_Crosshair
     public class DWG_Crosshair : MonoBehaviour
@@ -219,4 +228,4 @@ namespace UBRS.DWG_Crosshair
 
     } // Close - Public - Class - DWG_Crosshair
 
-} // Close - Namespace - UBRS.DWG_Crosshair
+} // Close - Namespace - DWG.UBRS.DWG_Crosshair
