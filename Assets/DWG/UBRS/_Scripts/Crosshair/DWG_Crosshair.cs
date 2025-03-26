@@ -16,8 +16,7 @@ namespace DWG.UBRS.DWG_Crosshair
 {
     // Public - Class - DWG_Crosshair
     public class DWG_Crosshair : MonoBehaviour
-    {
-        
+    {        
         // Public - Image - CrossTop
         public Image CrossTop;
 
@@ -37,7 +36,7 @@ namespace DWG.UBRS.DWG_Crosshair
         public bool CrosshairEnabled = true;
         
         // Private - RectTransform - Crosshair
-        private RectTransform Crosshair; // The RecTransform of Crosshair UI element.
+        private RectTransform Crosshair; // The RectTransform of Crosshair UI element.
         
         // Public - Rigidbody - CharacterRigidbody
         public Rigidbody CharacterRigidbody;
@@ -57,8 +56,8 @@ namespace DWG.UBRS.DWG_Crosshair
         // Let's Start
 
         // Private - Void - Start
-        private void Start() {
-
+        private void Start() 
+        {
             // Crosshair - GetComponent - RectTransform
             Crosshair = GetComponent<RectTransform>();
 
@@ -69,14 +68,13 @@ namespace DWG.UBRS.DWG_Crosshair
         // Update Is Called Once Per Frame
         
         // Private - Void - Update
-        private void Update() {
-
+        private void Update() 
+        {
             // Check If Player Is Currently Moving And Lerp CurrentSize To The Appropriate Value
 
             // If - CharacterIsMoving
             if (CharacterIsMoving)
-            {
-                
+            {                
                 // CurrentSize
                 CurrentSize = Mathf.Lerp(CurrentSize, MaxSize, Time.deltaTime * Speed);
 
@@ -84,8 +82,7 @@ namespace DWG.UBRS.DWG_Crosshair
 
             // Else
             else
-            {
-                
+            {                
                 // CurrentSize
                 CurrentSize = Mathf.Lerp(CurrentSize, IdleSize, Time.deltaTime * Speed);
 
@@ -103,13 +100,11 @@ namespace DWG.UBRS.DWG_Crosshair
         // Public - Void - LateUpdate
         public void LateUpdate()
         {
-
             // Let's Enable The Crosshair
 
             // If CrosshairEnabled Is True
             if (CrosshairEnabled == true)
             {
-
                 // Image - CrossTop - gameObject - SetActive - True
                 CrossTop.gameObject.SetActive(true);
 
@@ -137,8 +132,7 @@ namespace DWG.UBRS.DWG_Crosshair
 
             // Else If CrosshairEnabled Is False
             else if (CrosshairEnabled == false) 
-            {
-                 
+            {                 
                 // Image - CrossTop - gameObject - SetActive - False
                 CrossTop.gameObject.SetActive(false);
 
@@ -168,22 +162,18 @@ namespace DWG.UBRS.DWG_Crosshair
 
         // Bool - CharacterIsMoving
         private bool CharacterIsMoving
-        {
-            
+        {            
             // Get
             get
             {
-
                 // If We Have Assigned A Rigidbody, Check If Its Velocity Is Not Equal To Zero. If So, Return True
 
                 // If - CharacterRigidbody - Not Null
                 if (CharacterRigidbody != null)
                 {
-
                     // If CharacterRigidbody - velocity - sqrMagnitude Not 0
                     if (CharacterRigidbody.velocity.sqrMagnitude != 0)
                     {
-
                         // Return - True
                         return true;
 
@@ -192,7 +182,6 @@ namespace DWG.UBRS.DWG_Crosshair
                     // Else
                     else
                     {
-
                         // Return - False
                         return false;
 
@@ -207,7 +196,6 @@ namespace DWG.UBRS.DWG_Crosshair
                 ("Vertical") != 0 || Input.GetAxis("Mouse X") != 0 ||
                 Input.GetAxis("Mouse Y") != 0)
                 {
-
                     // Return - True
                     return true;
 
@@ -216,7 +204,6 @@ namespace DWG.UBRS.DWG_Crosshair
                 // Else
                 else
                 {
-
                     // Return - False
                     return false;
 
